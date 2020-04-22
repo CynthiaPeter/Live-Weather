@@ -29,18 +29,146 @@ class _WeatherAppState extends State<WeatherApp> {
               margin: EdgeInsets.fromLTRB(10, 0, 280.0, 0.0),
               child: Text(
                 'Awka',
-              style: GoogleFonts.lato(fontSize: 40, color: Colors.white,
+                style: GoogleFonts.lato(
+                  fontSize: 40,
+                  color: Colors.white,
+                ),
               ),
-            ),),
-            Container(margin: EdgeInsets.fromLTRB(10, 5.0, 130.0, 0.0),
-              child:
-              Text('12:48 AM - Saturday, 18th March 2020', style: GoogleFonts.raleway(color: Colors.white),)
-            ,),
-            SizedBox(height: 60),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(10, 5.0, 130.0, 0.0),
+              child: Text(
+                '12:48 AM - Saturday, 18th March 2020',
+                style: GoogleFonts.raleway(color: Colors.white),
+              ),
+            ),
+            SizedBox(height: 50),
             Container(
               margin: EdgeInsets.fromLTRB(10, 5.0, 290.0, 0.0),
-              child: Text('19', style: GoogleFonts.raleway(color: Colors.white, fontSize: 80),
-            ),)
+              child: Text(
+                '19\u00B0',
+                style: GoogleFonts.raleway(color: Colors.white, fontSize: 80),
+              ),
+            ),
+            Row(
+              children: <Widget>[
+                SizedBox(width: 20),
+                Container(
+                  child: Icon(
+                    Icons.cloud,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(width: 20),
+                Container(
+                  child: Text(
+                    'Cloudy',
+                    style:
+                        GoogleFonts.raleway(color: Colors.white, fontSize: 28),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 60),
+            SizedBox(
+              width: 380,
+              child: Divider(
+                height: 2,
+                color: Colors.white,
+              ),
+            ),
+            Row(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              // mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    SizedBox(height: 60),
+                    Row(
+                      children: <Widget>[
+                        //WINDY
+                        SizedBox(width: 30),
+                        Column(
+                          children: <Widget>[
+                            Text("Wind",
+                                style: GoogleFonts.lato(
+                                    color: Colors.white, fontSize: 12)),
+                            SizedBox(height: 15),
+                            Text(
+                              '11',
+                              style: GoogleFonts.lato(
+                                  color: Colors.white, fontSize: 28),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "km/h",
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(height: 7),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 80,
+                        ),
+                        //RAINY
+                        Column(
+                          children: <Widget>[
+                            Text("Rain",
+                                style: GoogleFonts.lato(
+                                    color: Colors.white, fontSize: 12)),
+                            SizedBox(height: 15),
+                            Text(
+                              '70',
+                              style: GoogleFonts.lato(
+                                  color: Colors.white, fontSize: 28),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "%",
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 80,
+                        ),
+                        //SUNNY
+                        Column(
+                          children: <Widget>[
+                            Text(
+                              "Humidity",
+                              style: GoogleFonts.lato(
+                                  color: Colors.white, fontSize: 12),
+                            ),
+                            SizedBox(height: 15),
+                            Text(
+                              '32',
+                              style: GoogleFonts.lato(
+                                  color: Colors.white, fontSize: 28),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "%",
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                              ),
+                            ),
+                           
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            )
           ],
         ),
       ),
