@@ -9,9 +9,18 @@ class WeatherApp extends StatefulWidget {
 class _WeatherAppState extends State<WeatherApp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.brown[800],
-      body: Center(
+    return Material(
+    type: MaterialType.transparency,
+    child: Stack(
+      children: <Widget>[
+        Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage('images/weather-img3.jpg'),
+            fit: BoxFit.cover )
+          ),
+        ),
+        Container(
+          child: Center(
         child: Column(
           children: <Widget>[
             Container(
@@ -20,9 +29,10 @@ class _WeatherAppState extends State<WeatherApp> {
               child: Icon(Icons.sort, color: Colors.white, size: 35),
             ),
             Container(
+              alignment:Alignment.bottomLeft ,
               height: 30,
-              color: Colors.red,
-              //child: ,
+              // color: Colors.red,
+              // child: Text('H....', style: TextStyle(fontSize: 25, color: Colors.white)),
             ),
             SizedBox(height: 60),
             Container(
@@ -78,8 +88,6 @@ class _WeatherAppState extends State<WeatherApp> {
               ),
             ),
             Row(
-              // mainAxisAlignment: MainAxisAlignment.start,
-              // mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Column(
                   children: <Widget>[
@@ -87,12 +95,12 @@ class _WeatherAppState extends State<WeatherApp> {
                     Row(
                       children: <Widget>[
                         //WINDY
-                        SizedBox(width: 30),
+                        SizedBox(width: 40),
                         Column(
                           children: <Widget>[
                             Text("Wind",
                                 style: GoogleFonts.lato(
-                                    color: Colors.white, fontSize: 12)),
+                                    color: Colors.white, fontSize: 15)),
                             SizedBox(height: 15),
                             Text(
                               '11',
@@ -111,14 +119,14 @@ class _WeatherAppState extends State<WeatherApp> {
                           ],
                         ),
                         SizedBox(
-                          width: 80,
+                          width: 105,
                         ),
                         //RAINY
                         Column(
                           children: <Widget>[
                             Text("Rain",
                                 style: GoogleFonts.lato(
-                                    color: Colors.white, fontSize: 12)),
+                                    color: Colors.white, fontSize: 15)),
                             SizedBox(height: 15),
                             Text(
                               '70',
@@ -136,7 +144,7 @@ class _WeatherAppState extends State<WeatherApp> {
                           ],
                         ),
                         SizedBox(
-                          width: 80,
+                          width: 105,
                         ),
                         //SUNNY
                         Column(
@@ -144,7 +152,7 @@ class _WeatherAppState extends State<WeatherApp> {
                             Text(
                               "Humidity",
                               style: GoogleFonts.lato(
-                                  color: Colors.white, fontSize: 12),
+                                  color: Colors.white, fontSize: 15),
                             ),
                             SizedBox(height: 15),
                             Text(
@@ -172,6 +180,9 @@ class _WeatherAppState extends State<WeatherApp> {
           ],
         ),
       ),
+        )
+      ],
+    ),
     );
   }
 }
