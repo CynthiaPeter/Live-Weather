@@ -14,6 +14,7 @@ class _WeatherAppState extends State<WeatherApp> {
     child: Stack(
       children: <Widget>[
         Container(
+          height: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(image: AssetImage('images/weather-img3.jpg'),
             fit: BoxFit.cover )

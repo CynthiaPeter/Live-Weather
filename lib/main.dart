@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Weather App',
       home: Scaffold(
-        body: SafeArea(child: WeatherApp()),
+        body:  WeatherApp(),
       ),
       debugShowCheckedModeBanner: false,
     );
